@@ -57,11 +57,28 @@ a {
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
+
+/* Image size – tweak height if your logo looks too big/small */
+.logo-img {
+  height: 32px;
+}
+
+/* Keep the text for screen readers but hide it visually */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 
 /* Nav links */
 .main-nav {
