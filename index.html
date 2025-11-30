@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Noran Transmission – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper header-inner">
+      <a href="index.html" class="logo">Noran Transmission</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="catalog.html" class="nav-link">Catalog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="page-intro">
+      <h1 class="page-title">Welcome to Noran Transmission</h1>
+      <p class="page-subtitle">
+        Simple placeholder home page. You can replace this section later with your
+        real content, images, or anything else.
+      </p>
+    </section>
+
+    <section class="section-card grid-two">
+      <div>
+        <h2>Clean, minimal starting point</h2>
+        <p>
+          This home page is intentionally simple so you can plug in your own
+          messaging later. You might want to add a short introduction, key
+          offerings, or a hero image.
+        </p>
+        <p>
+          The layout is responsive and will adjust nicely on mobile screens.
+        </p>
+      </div>
+      <div>
+        <h3>Next steps for you</h3>
+        <ul class="details-list">
+          <li>Replace this text with your actual home page copy.</li>
+          <li>Add product photos or a hero banner if needed.</li>
+          <li>Update the About, Catalog, and Contact pages with your details.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Noran Transmission. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

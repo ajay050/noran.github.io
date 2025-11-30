@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Noran Transmission – Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper header-inner">
+      <a href="index.html" class="logo">Noran Transmission</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="catalog.html" class="nav-link">Catalog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="page-intro">
+      <h1 class="page-title">Contact Us</h1>
+      <p class="page-subtitle">
+        Add your real contact details here: address, phone, email, and a simple form.
+      </p>
+    </section>
+
+    <section class="section-card grid-two">
+      <div>
+        <h2>Get in touch</h2>
+        <form class="form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="How can we help?"></textarea>
+          </div>
+
+          <button type="button" class="button-primary">
+            Send (placeholder)
+          </button>
+        </form>
+        <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--text-muted);">
+          This form is just visual for now. When you’re ready, we can hook it up to a real email service.
+        </p>
+      </div>
+
+      <div>
+        <h3>Contact details</h3>
+        <ul class="details-list">
+          <li><strong>Address:</strong> [Your address here]</li>
+          <li><strong>Phone:</strong> [Phone number]</li>
+          <li><strong>Email:</strong> [info@noran.in]</li>
+          <li><strong>Hours:</strong> [Working hours]</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Noran Transmission. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

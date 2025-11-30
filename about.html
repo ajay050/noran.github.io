@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Noran Transmission – About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper header-inner">
+      <a href="index.html" class="logo">Noran Transmission</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="catalog.html" class="nav-link">Catalog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="page-intro">
+      <h1 class="page-title">About Us</h1>
+      <p class="page-subtitle">
+        Replace this placeholder text with your company story, values, and background.
+      </p>
+    </section>
+
+    <section class="section-card grid-two">
+      <div>
+        <h2>Who we are</h2>
+        <p>
+          This is a placeholder description. You can describe when the company
+          started, what you specialise in, and the industries you serve.
+        </p>
+
+        <h2>How we work</h2>
+        <p>
+          Briefly explain your approach: quality focus, customer service,
+          reliability, etc. Keep it short and easy to read.
+        </p>
+      </div>
+
+      <div>
+        <h3>At a glance</h3>
+        <ul class="details-list">
+          <li>Founded: <em>[Year]</em></li>
+          <li>Location: <em>[City, Country]</em></li>
+          <li>Core products or services: <em>[Short list]</em></li>
+          <li>Key value: <em>[e.g. Precision, Reliability, Speed]</em></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Noran Transmission. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
