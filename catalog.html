@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Noran Transmission – Catalog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <title>Noran Transmission – Catalog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="wrapper header-inner">
-      <a href="index.html" class="logo">Noran Transmission</a>
+    <header class="site-header">
+        <div class="wrapper header-inner">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Noran Transmission logo" class="logo-img" />
+                <span class="sr-only">Noran Transmission</span>
+            </a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
 
-      <nav class="main-nav" id="mainNav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="catalog.html" class="nav-link active">Catalog</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-    </div>
-  </header>
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="catalog.html" class="nav-link active">Catalog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <main class="wrapper">
-    <section class="page-intro">
-      <h1 class="page-title">Catalog</h1>
-      <p class="page-subtitle">
-        Simple placeholder catalog. Later you can replace these items with real products.
-      </p>
-    </section>
+    <main class="wrapper">
+        <section class="page-intro">
+            <h1 class="page-title">Catalog</h1>
+            <p class="page-subtitle">
+                Simple placeholder catalog. Later you can replace these items with real products.
+            </p>
+        </section>
 
-    <section class="section-card">
-      <div class="catalog-grid">
-        <article class="catalog-item">
-          <h3>Product Category 1</h3>
-          <p>
-            Short description of this category or key products.
-          </p>
-        </article>
+        <section class="section-card">
+            <div class="catalog-grid">
+                <article class="catalog-item">
+                    <h3>Product Category 1</h3>
+                    <p>
+                        Short description of this category or key products.
+                    </p>
+                </article>
 
-        <article class="catalog-item">
-          <h3>Product Category 2</h3>
-          <p>
-            Another category placeholder. You can add more items or link to PDFs.
-          </p>
-        </article>
+                <article class="catalog-item">
+                    <h3>Product Category 2</h3>
+                    <p>
+                        Another category placeholder. You can add more items or link to PDFs.
+                    </p>
+                </article>
 
-        <article class="catalog-item">
-          <h3>Product Category 3</h3>
-          <p>
-            Use this area to highlight important products or ranges.
-          </p>
-        </article>
-      </div>
-    </section>
-  </main>
+                <article class="catalog-item">
+                    <h3>Product Category 3</h3>
+                    <p>
+                        Use this area to highlight important products or ranges.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-  <footer class="site-footer">
-    © <span id="year"></span> Noran Transmission. All rights reserved.
-  </footer>
+    <footer class="site-footer">
+        © <span id="year"></span> Noran Transmission. All rights reserved.
+    </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-  <script src="script.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
