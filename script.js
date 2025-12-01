@@ -1,16 +1,5 @@
-// Simple mobile navigation toggle
 document.addEventListener("DOMContentLoaded", function () {
-  const navToggle = document.getElementById("navToggle");
-  const mainNav = document.getElementById("mainNav");
-
-  if (!navToggle || !mainNav) return;
-
-  navToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
+  // === Mobile Navigation ===
   const navToggle = document.getElementById("navToggle");
   const mainNav = document.getElementById("mainNav");
 
@@ -20,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // === Contact form email sending ===
+  // === Contact Form Handling ===
   const contactForm = document.getElementById("contactForm");
   const statusEl = document.getElementById("contactStatus");
   const submitBtn = document.getElementById("contactSubmit");
@@ -42,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       submitBtn.disabled = true;
       statusEl.textContent = "Sending...";
 
-      // Params for your email (to you)
+      // Parameters for email to YOU
       const ownerParams = {
         from_name: name,
         from_email: email,
@@ -55,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       emailjs
         .send("service_781v238", "template_5bdrc5v", ownerParams)
         .then(function () {
-          // 2) Optionally send copy to user
+          // 2) If user requested copy, send it
           if (sendCopy) {
             const userParams = {
               from_name: name,
@@ -72,8 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         })
         .then(function () {
-          statusEl.textContent =
-            "Thank you! Your message has been sent.";
+          statusEl.textContent = "Thank you! Your message has been sent.";
           contactForm.reset();
         })
         .catch(function (error) {
@@ -87,4 +75,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
