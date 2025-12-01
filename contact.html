@@ -37,77 +37,67 @@
             </p>
         </section>
 
-       <section class="section-card grid-two">
-  <div>
-    <h2>Get in touch</h2>
-    <form class="form" id="contactForm">
-      <div class="form-row">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your name" required />
-      </div>
+        <section class="section-card grid-two">
+            <div>
+                <h2>Get in touch</h2>
+                <form class="form" id="contactForm">
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required />
+                    </div>
 
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="you@example.com" required />
-      </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                    </div>
 
-      <div class="form-row">
-        <label for="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="4"
-          placeholder="How can we help?"
-          required
-        ></textarea>
-      </div>
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="How can we help?"
+                            required></textarea>
+                    </div>
 
-      <div class="form-row">
-        <label style="display:flex; align-items:center; gap:0.4rem; font-size:0.9rem;">
-          <input type="checkbox" id="sendCopy" />
-          Send me a copy of this message
-        </label>
-      </div>
+                    <div class="form-row">
+                        <label style="display:flex; align-items:center; gap:0.4rem; font-size:0.9rem;">
+                            <input type="checkbox" id="sendCopy" />
+                            Send me a copy of this message
+                        </label>
+                    </div>
 
-      <button type="submit" class="button-primary" id="contactSubmit">
-        Send message
-      </button>
-      <p id="contactStatus" style="font-size:0.85rem; margin-top:0.5rem; color:var(--text-muted);"></p>
-    </form>
-  </div>
+                    <button type="submit" class="button-primary" id="contactSubmit">
+                        Send message
+                    </button>
+                    <p id="contactStatus" style="font-size:0.85rem; margin-top:0.5rem; color:var(--text-muted);"></p>
+                </form>
+            </div>
 
-  <div>
-    <h3>Contact details</h3>
-    <ul class="details-list">
-      <li><strong>Address:</strong> [Your address here]</li>
-      <li><strong>Phone:</strong> [Phone number]</li>
-      <li><strong>Email:</strong> [info@noran.in]</li>
-      <li><strong>Hours:</strong> [Working hours]</li>
-    </ul>
-  </div>
-</section>
+            <div>
+                <h3>Contact details</h3>
+                <ul class="details-list">
+                    <li><strong>Address:</strong> [Your address here]</li>
+                    <li><strong>Phone:</strong> [Phone number]</li>
+                    <li><strong>Email:</strong> [info@noran.in]</li>
+                    <li><strong>Hours:</strong> [Working hours]</li>
+                </ul>
+            </div>
+        </section>
 
     </main>
 
     <footer class="site-footer">
         © <span id="year"></span> Noran Transmission Private Limited. All rights reserved.
     </footer>
+    <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+    <script>
+        emailjs.init("W-ALQ03ghXk3TLepn");
+    </script>
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="script.js"></script>
-</body>
-<script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
-<script>
-  (function () {
-    emailjs.init("W-ALQ03ghXk3TLepn");
-  })();
-</script>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
+
+</body>
 
 </html>
