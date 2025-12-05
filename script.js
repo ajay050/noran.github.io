@@ -1,20 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // === Mobile Navigation ===
-  const navToggle = document.getElementById("navToggle");
-  const mainNav = document.getElementById("mainNav");
-
-  if (navToggle && mainNav) {
-    navToggle.addEventListener("click", () => {
-      mainNav.classList.toggle("open");
-    });
-  }
-
-  // === Contact Form Handling ===
   const contactForm = document.getElementById("contactForm");
   const statusEl = document.getElementById("contactStatus");
   const submitBtn = document.getElementById("contactSubmit");
 
-  if (contactForm && statusEl && submitBtn && window.emailjs) {
+  if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -30,24 +19,37 @@ document.addEventListener("DOMContentLoaded", function () {
       submitBtn.disabled = true;
       statusEl.textContent = "Sending...";
 
-      // Only send the variables defined in your template
-      const params = {
+      const ownerParams = {
         name: name,
-        email: email
+        email: email,
+        message: message
       };
 
       emailjs
-        .send("service_781v238", "template_5bdrc5v", params)
-        .then(function () {
-          statusEl.textContent = "Thank you! Your message has been sent.";
+        .send("service_781v238", "template_x2rcb97", ownerParams)
+        .then(() => {
+          // 2️⃣ Send acknowledgement to USER
+          const replyParams = {
+            name: name,
+            email: email
+          };
+
+          return emailjs.send(
+            "service_781v238",
+            "template_5bdrc5v",
+            replyParams
+          );
+        })
+        .then(() => {
+          statusEl.textContent = "Your message has been sent successfully.";
           contactForm.reset();
         })
-        .catch(function (error) {
-          console.error("EmailJS error:", error);
+        .catch((err) => {
+          console.error("EmailJS Error:", err);
           statusEl.textContent =
-            "Sorry, there was a problem sending your message.";
+            "Error sending message. Please try again later.";
         })
-        .finally(function () {
+        .finally(() => {
           submitBtn.disabled = false;
         });
     });
